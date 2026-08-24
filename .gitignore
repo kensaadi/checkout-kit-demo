@@ -8,3 +8,7 @@ dist/
 # build output (any level)
 **/dist/
 **/node_modules/
+
+# stray media/exports
+*.mp4
+*.mov
