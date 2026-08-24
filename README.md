@@ -1,5 +1,15 @@
 # Checkout Kit — Demo · React + Stripe checkout starter (MUI)
 
+[![CI](https://github.com/kensaadi/checkout-kit-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/kensaadi/checkout-kit-demo/actions/workflows/ci.yml)
+[![Live demo](https://img.shields.io/badge/live%20demo-checkout--kit.dashforge--ui.com-6C4DF6?logo=stripe&logoColor=white)](https://checkout-kit.dashforge-ui.com)
+[![Get the production kit](https://img.shields.io/badge/get%20the%20kit-dashforge--ui.com-0B1220)](https://dashforge-ui.com/starter-kits)
+
+![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-6-007FFF?logo=mui&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-Elements-635BFF?logo=stripe&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+
 A free, **runnable** demo of a production-style **Stripe checkout app** built with
 **React 19 + TypeScript + MUI** — storefront, server-side-style cart, and a
 three-step checkout wizard. It runs **fully in mock mode** (in-memory data, no
