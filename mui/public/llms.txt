@@ -1,0 +1,56 @@
+# checkout-kit
+
+> The first production-grade Go SaaS starter kit with Stripe checkout, RBAC, admin dashboard, and S3 image upload. Node backend and Tailwind frontend also included. One purchase, two backend editions, two frontend flavors.
+
+checkout-kit is a full-stack React starter kit for building Stripe-powered storefronts. It ships a public product catalog, a currency-locked cart, a 3-step Stripe checkout wizard (Elements + Setup Intent), order management, a Stripe webhook handler, a field-level RBAC engine, and an admin dashboard with a sales chart and S3 drag-drop image upload.
+
+Two backend editions: Go (Gin + MongoDB, premium) and Node (Express + MongoDB, accessible). Two frontend flavors per edition: MUI v9 (Material Design, dark mode) and Tailwind CSS. All four combinations share the same API contracts, the same Stripe flow, and the same 43-file Bruno API collection.
+
+MongoDB ships by default. PostgreSQL is available free on request for any edition.
+
+## Documentation
+
+- [Introduction](https://checkout-kit.dashforge-ui.com/docs): Overview, feature list, stack, and quick-start for all four kit flavors.
+- [Installation](https://checkout-kit.dashforge-ui.com/docs/installation): Step-by-step setup for Go or Node backend, MUI or Tailwind frontend, environment variables, Stripe CLI webhook forwarding.
+- [Architecture](https://checkout-kit.dashforge-ui.com/docs/architecture): Project layout for Go and Node editions, folder conventions, module boundaries.
+- [MUI vs Tailwind](https://checkout-kit.dashforge-ui.com/docs/mui-vs-tailwind): Feature parity table, design token comparison, when to pick each flavor.
+- [Provider Pattern](https://checkout-kit.dashforge-ui.com/docs/provider-pattern): Per-domain live/mock provider pattern — develop the full frontend without a running server.
+- [RBAC Engine](https://checkout-kit.dashforge-ui.com/docs/rbac): Role-based access control with role inheritance, field-level permissions, and the Can component.
+- [Theme & Tokens](https://checkout-kit.dashforge-ui.com/docs/theme): DashForge design tokens, dark mode implementation, MUI theme extension.
+- [Catalog](https://checkout-kit.dashforge-ui.com/docs/catalog): Public storefront — product grid, search, slug-based product detail page.
+- [Stripe Checkout](https://checkout-kit.dashforge-ui.com/docs/checkout): 3-step Stripe wizard using Elements and Setup Intent, cart lock, idempotency key strategy.
+- [Cart & Orders](https://checkout-kit.dashforge-ui.com/docs/cart-orders): Currency-locked cart, immutable order snapshot at checkout, orders list.
+- [Products CRUD](https://checkout-kit.dashforge-ui.com/docs/admin-products): Admin product form (Create/Edit shared), S3 cover + gallery upload, sales read-only via RBAC.
+- [Dashboard](https://checkout-kit.dashforge-ui.com/docs/admin-dashboard): Sales chart (Recharts AreaChart), top products, recent activity feed — all from one /v1/admin/orders fetch.
+- [Bruno Collection](https://checkout-kit.dashforge-ui.com/docs/bruno): 43-file Bruno API collection covering all 33 endpoints — auth, products, cart, checkout, orders, webhooks.
+- [API Endpoints](https://checkout-kit.dashforge-ui.com/docs/api-endpoints): Full endpoint reference for Go and Node editions — method, path, auth, request/response shapes.
+- [Stripe Webhook](https://checkout-kit.dashforge-ui.com/docs/webhook): Webhook handler for payment_intent.succeeded / payment_failed / charge.refunded, idempotency, signature verification.
+- [Deploy to DigitalOcean](https://checkout-kit.dashforge-ui.com/docs/deployment): Step-by-step deployment guide for DO App Platform (managed PaaS) and Droplet (VPS + nginx + certbot). Covers Go and Node editions.
+- [Production Checklist](https://checkout-kit.dashforge-ui.com/docs/production): Environment variables, CORS, Stripe live keys, S3 bucket policy, MongoDB Atlas, deployment options.
+- [Pricing](https://checkout-kit.dashforge-ui.com/docs/pricing): License tiers for Go Edition (Developer $399, Team $899, Extended $1999) and Node Edition (Developer $299, Team $699, Extended $1499). One-time purchase. Team includes 2h implementation support. Extended includes 4h implementation support and white-label rights.
+- [License](https://checkout-kit.dashforge-ui.com/docs/license): Commercial source-available license. Non-exclusive, non-transferable grant per tier. No redistribution of source. Author retains all IP. No AI/ML training permitted. All sales final.
+- [Privacy Policy](https://checkout-kit.dashforge-ui.com/docs/privacy): GDPR-compliant privacy policy. Controller: Ken Saadi. Data collected: email via Stripe for delivery only. No retention. No tracking cookies.
+
+## Tech Stack
+
+**Frontend (both editions):** React 19, Vite 5, Valtio (state), Zod (validation), React Router v6, React Hook Form. MUI flavor adds MUI v9 + DashForge theme tokens + dark mode. Tailwind flavor adds Tailwind CSS v4 + DashForge Tailwind tokens.
+
+**Go Edition backend:** Go 1.24, Gin, MongoDB driver (no ORM), JWT + bcrypt, Stripe Go SDK, AWS SDK v2 (S3-compatible).
+
+**Node Edition backend:** Node.js, Express, TypeScript, Mongoose, JWT + bcrypt, Stripe Node SDK, AWS SDK v3 (S3-compatible).
+
+**Testing:** 314 Vitest cases (mock + live + mapper layers), Bruno collection for API testing.
+
+## Pricing
+
+Go Edition — one-time purchase, no subscription:
+- Developer: $399 — 1 developer, 1 production deploy, community support
+- Team: $899 — up to 5 developers, up to 3 production deploys, priority support, 2h implementation support (live session on your codebase)
+- Extended: $1,999 — unlimited developers, unlimited deploys, white-label rights, SLA support, 4h implementation support (dedicated sessions)
+
+Node Edition — one-time purchase, no subscription:
+- Developer: $299 — 1 developer, 1 production deploy, community support
+- Team: $699 — up to 5 developers, up to 3 production deploys, priority support, 2h implementation support (live session on your codebase)
+- Extended: $1,499 — unlimited developers, unlimited deploys, white-label rights, SLA support, 4h implementation support (dedicated sessions)
+
+All sales final. PostgreSQL integration free on request. Own the code forever.

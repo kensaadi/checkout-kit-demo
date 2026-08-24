@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2563EB" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!--
+      SEO split (SPA, no SSR/prerender):
+
+      • Per-route tags — <title>, description, canonical, robots — are
+        emitted ONLY by the in-app <Seo /> component (src/seo/). They are
+        deliberately ABSENT here: React 19 head-hoisting APPENDS tags, it
+        does not replace static ones, so duplicating them in index.html
+        produced two <title>/<canonical>/<robots> per page (the static
+        canonical even pointed every page at the root). JS crawlers
+        (Googlebot) run the app and see the correct per-route tag.
+
+      • Open Graph / Twitter tags BELOW are static homepage values and
+        live ONLY here. They are the fallback for no-JS social scrapers
+        (Facebook, LinkedIn, Slack, X), which never execute the app — a
+        SPA cannot serve per-route OG to them without prerendering, so a
+        single valid homepage card is the best achievable default. The
+        <Seo /> component intentionally does NOT emit OG/Twitter, to keep
+        exactly one set in the DOM.
+    -->
+    <meta name="generator" content="checkout-kit" />
+    <meta name="application-name" content="checkout-kit" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Slack, Discord, ...) — static
+         homepage fallback for no-JS scrapers. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="checkout-kit" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:title"
+      content="checkout-kit · Stripe Checkout App (Go/Node, MUI/Tailwind)"
+    />
+    <meta
+      property="og:description"
+      content="Production Stripe checkout app for React. Storefront, cart, 3-step Stripe wizard, admin, RBAC, S3 uploads. Go or Node backend, MUI or Tailwind frontend."
+    />
+    <meta property="og:url" content="https://checkout-kit.dashforge-ui.com/" />
+    <meta
+      property="og:image"
+      content="https://checkout-kit.dashforge-ui.com/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X cards — static homepage fallback. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dashforge_ui" />
+    <meta
+      name="twitter:title"
+      content="checkout-kit · Stripe Checkout App (Go/Node, MUI/Tailwind)"
+    />
+    <meta
+      name="twitter:description"
+      content="Production Stripe checkout app for React. Storefront, cart, 3-step Stripe wizard, admin, RBAC, S3 uploads. Go or Node, MUI or Tailwind."
+    />
+    <meta
+      name="twitter:image"
+      content="https://checkout-kit.dashforge-ui.com/og-image.png"
+    />
+
+    <!--
+      Icons (favicon, PWA, Apple touch). The shopping-bag + check mark
+      icon in /public/ communicates "checkout" more concretely than a
+      bare check glyph; the gradient matches BrandMark + theme tokens.
+    -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#2563EB" />
+
+    <!-- PWA manifest — display: standalone, brand theme color. -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Apple-specific PWA tags (iOS standalone mode). -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Checkout Kit" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

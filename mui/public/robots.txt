@@ -1,0 +1,22 @@
+# checkout-kit — robots policy
+# Public surface: marketing landing + full documentation.
+# Everything else is user-private and noindex'd at the page level
+# too, but we belt-and-braces here so crawlers don't waste budget.
+
+User-agent: *
+Allow: /$
+Allow: /docs
+Allow: /docs/
+
+Disallow: /login
+Disallow: /customer-login
+Disallow: /welcome
+Disallow: /cart
+Disallow: /checkout
+Disallow: /orders
+Disallow: /profile
+Disallow: /admin
+Disallow: /shop
+
+Sitemap: https://checkout-kit.dashforge-ui.com/sitemap.xml
+LLMs: https://checkout-kit.dashforge-ui.com/llms.txt

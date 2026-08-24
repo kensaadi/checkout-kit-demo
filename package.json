@@ -1,0 +1,41 @@
+{
+  "name": "checkout-kit-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Free demo of the Dashforge Checkout Kit — a React (MUI) storefront + cart + checkout UI running fully in mock mode (no backend). The production kit adds the Node/Go backend, Stripe webhooks, orders, RBAC and admin.",
+  "scripts": {
+    "dev": "pnpm --dir mui dev",
+    "build": "pnpm --dir mui build",
+    "preview": "pnpm --dir mui preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@dashforge/forms": "1.0.0",
+    "@dashforge/rbac": "1.0.0",
+    "@dashforge/tokens": "1.0.0",
+    "@dashforge/ui-core": "1.0.0",
+    "@hookform/resolvers": "^3.3.0",
+    "@stripe/react-stripe-js": "^3.0.0",
+    "@stripe/stripe-js": "^4.0.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "axios": "^1.6.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-hook-form": "^7.50.0",
+    "react-router-dom": "^6.22.0",
+    "react-syntax-highlighter": "^16.1.1",
+    "recharts": "^3.8.1",
+    "valtio": "^2.1.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "axios-mock-adapter": "^2.1.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.1.0"
+  }
+}
