@@ -10,6 +10,8 @@
 ![Stripe](https://img.shields.io/badge/Stripe-Elements-635BFF?logo=stripe&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
 
+![Checkout Kit demo](screenshots/demo.gif)
+
 A free, **runnable** demo of a production-style **Stripe checkout app** built with
 **React 19 + TypeScript + MUI** — storefront, server-side-style cart, and a
 three-step checkout wizard. It runs **fully in mock mode** (in-memory data, no
@@ -23,7 +25,9 @@ whole flow in under a minute.
 
 **Live demo (with the real backend):** https://checkout-kit.dashforge-ui.com
 
-![Checkout Kit demo — React + Stripe checkout UI](screenshots/home.png)
+**▶ Watch the 90-second demo:**
+
+[![Watch the Checkout Kit demo on YouTube](https://img.youtube.com/vi/tc1TY4ca06I/maxresdefault.jpg)](https://youtu.be/tc1TY4ca06I)
 
 ## Quick start
 
